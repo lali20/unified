@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Teacher Dashboard</h1>
+        <form id="teacherLoginForm" onsubmit="return teacherLogin()">
+            <label for="teacherUsername">Username:</label>
+            <input type="text" id="teacherUsername" required>
+            <label for="teacherPassword">Password:</label>
+            <input type="password" id="teacherPassword" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <div id="teacherActions" style="display:none;">
+            <button onclick="scheduleAppointment()">Schedule Appointment</button>
+            <button onclick="approveCancelAppointment()">Approve/Cancel Appointment</button>
+            <button onclick="viewMessages()">View Messages</button>
+            <button onclick="viewAllAppointments()">View All Appointments</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

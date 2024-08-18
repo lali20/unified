@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Dashboard</h1>
+        <form id="studentLoginForm" onsubmit="return studentLogin()">
+            <label for="studentName">Name:</label>
+            <input type="text" id="studentName" required>
+            <label for="studentDOB">Date of Birth:</label>
+            <input type="date" id="studentDOB" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <div id="studentActions" style="display:none;">
+            <button onclick="searchTeacher()">Search Teacher</button>
+            <button onclick="bookAppointment()">Book Appointment</button>
+            <button onclick="sendMessage()">Send Message</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
