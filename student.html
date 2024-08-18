@@ -3,27 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Student Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('https://www.thoughtco.com/thmb/SCBLwY2p-iEr2Fq30tD-wNyj424=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/in-the-classroom-multi-ethnic-students-listening-to-a-lecturer-and-writing-in-notebooks--smart-young-people-study-at-the-college--962475722-5c76f411c9e77c0001f57b64.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .nav-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #3e8e41;
+        }
+        .image-container {
+            text-align: center;
+        }
+        .image-container img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 20px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>Student Dashboard</h1>
-        <form id="studentLoginForm" onsubmit="return studentLogin()">
-            <label for="studentName">Name:</label>
-            <input type="text" id="studentName" required>
-            <label for="studentDOB">Date of Birth:</label>
-            <input type="date" id="studentDOB" required>
-            <button type="submit">Login</button>
-        </form>
-
-        <div id="studentActions" style="display:none;">
-            <button onclick="searchTeacher()">Search Teacher</button>
-            <button onclick="bookAppointment()">Book Appointment</button>
+        <div class="image-container">
+            <img src="https://www.thoughtco.com/thmb/SCBLwY2p-iEr2Fq30tD-wNyj424=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/in-the-classroom-multi-ethnic-students-listening-to-a-lecturer-and-writing-in-notebooks--smart-young-people-study-at-the-college--962475722-5c76f411c9e77c0001f57b64.jpg">
+        </div>
+        <h2>Welcome, Student!</h2>
+        <div class="nav-container">
+            <button onclick="navigateTo('register')">Register</button>
+            <br>
+            <button onclick="navigateTo('login')">Login</button>
+            <br>
+            <button onclick="navigateTo('search-teacher')">Search Teacher</button>
+            <br>
+            <button onclick="navigateTo('book-appointment')">Book Appointment</button>
+            <br>
             <button onclick="sendMessage()">Send Message</button>
         </div>
     </div>
 
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
