@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student-Teacher Booking Appointment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient(to bottom, #f2f2f2, #fff);
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .heading {
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .heading span {
+            font-size: 24px;
+            font-weight: normal;
+            color: #666;
+        }
+        .role-btn {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .role-btn:hover {
+            background-color: #3e8e41;
+        }
+        .role-btn.admin {
+            background-color: #9C27B0;
+        }
+        .role-btn.student {
+            background-color: #03A9F4;
+        }
+        .role-btn.teacher {
+            background-color: #FFC107;
+        }
+        .illustration {
+            width: 100%;
+            height: 200px;
+            background-image: url('https://simplybook.me/build/images/categories/category-landing/Schools.83e1101c.png');
+            background-size: 50%;
+            background-position: center;
+            border-radius: 20px 20px 10px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="illustration"></div>
+        <h1 class="heading">Student-Teacher Booking Appointment <span>Choose your role</span></h1>
+        <p>Select your role:</p>
+        <button class="role-btn admin" onclick="location.href='admin.html'">Admin</button>
+        <button class="role-btn student" onclick="location.href='student.html'">Student</button>
+        <button class="role-btn teacher" onclick="location.href='teacher.html'">Teacher</button>
+    </div>
+</body>
+</html>
